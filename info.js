@@ -21,7 +21,7 @@ let info = {
       place: "Bandar Lampung",
       date: "April 2023 - September 2026",
       degree: "Undergraduate in Informatics Student",
-      gpa: "3.3/4.0",
+      gpa: "3.2/4.0",
       description:
         "",
       skills: [
