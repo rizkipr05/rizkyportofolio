@@ -46,7 +46,7 @@ let info = {
     {
       "name": "Universitas Teknokrat Indonesia",
       "place": "Programming Teknokrat",
-      "date": "Jan 2022 - Now",
+      "date": "Feb 2024 - Now",
       "position": "Head of AI Division",
       "description": "Leading the AI division to design and implement intelligent solutions aligned with company goals. Collaborated with developers and project managers to integrate AI into internal systems, including enhancing CRM automation and decision-making workflows. Conducted weekly training sessions to upskill team members in machine learning and AI tools. Spearheaded the development of key AI prototypes, achieving over 80% of strategic milestones ahead of schedule.",
       "skills": ["Python", "Machine Learning", "TensorFlow", "Scikit-learn", "AI Strategy"]
