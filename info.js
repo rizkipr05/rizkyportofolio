@@ -13,7 +13,7 @@ let info = {
   links: {
     linkedin: "www.linkedin.com/in/muhamad-rzky-pratama-baa27a324",
     github: "https://github.com/rizkipr05",
-    resume: "https://drive.google.com/file/d/1W0pzOo1Gb-W70BYKehOfZ4qaJt7m1_7O/view?usp=sharing",
+    resume: "https://drive.google.com/file/d/11vaaBsWSvtMqeeuL810c6d_KARwJ4fX7/view?usp=sharing",
   },
   education: [
     {
