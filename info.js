@@ -90,6 +90,10 @@ let info = {
       name: "Judul Sertifikat",
       image: require("./src/assets/certif/6.png"),
     },
+     {
+      name: "Judul Sertifikat",
+      image: require("./src/assets/sertifikat.png"),
+    },
     {
       name: "Judul Sertifikat",
       image: require("./src/assets/certif/7.png"),
