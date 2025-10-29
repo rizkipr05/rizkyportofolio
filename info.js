@@ -32,24 +32,32 @@ let info = {
       ]
     },
   ],
-  experience: [
-    {
-      name: "Freelancer",
-      place: "Bandar Lampung",
-      date: "Jan 2024 - Now",
-      position: "Junior Web Developer",
-      description: "creating apps and web UI, Creating Interactive prototypes, Low fidelity and UX researches",
-      skills: ["Laravel", "PHP", "React", "Vue", "Bootstrap", "Tailwind css"]
-    },
-    {
-      "name": "Universitas Teknokrat Indonesia",
-      "place": "Programming Teknokrat",
-      "date": "Feb 2024 - Now",
-      "position": "Head of AI Division",
-      "description": "Leading the AI division to design and implement intelligent solutions aligned with company goals. Collaborated with developers and project managers to integrate AI into internal systems, including enhancing CRM automation and decision-making workflows. Conducted weekly training sessions to upskill team members in machine learning and AI tools. Spearheaded the development of key AI prototypes, achieving over 80% of strategic milestones ahead of schedule.",
-      "skills": ["Python", "Machine Learning", "TensorFlow", "Scikit-learn", "AI Strategy"]
-    }    
-  ],
+experience: [
+  {
+    name: "HempArt Indonesia",
+    place: "Bandar Lampung",
+    date: "Jul 2024 - Oct 2024",
+    position: "Software Developer (Internship)",
+    description: "Developed a job board platform called ArkWork, focusing on full-stack web and mobile app development. Built and optimized RESTful APIs using Node.js and PostgreSQL, integrated React for web and Flutter for mobile applications, and implemented features such as job postings, authentication, and admin dashboards. Collaborated with cross-functional teams to ensure scalability, clean architecture, and smooth deployment.",
+    skills: ["Node.js", "React", "Flutter", "REST API", "PostgreSQL"]
+  }
+  {
+    name: "Freelancer",
+    place: "Bandar Lampung",
+    date: "Jan 2024 - Now",
+    position: "Junior Web Developer",
+    description: "Creating apps and web UI, developing interactive prototypes, and conducting low-fidelity and UX research to improve user experience.",
+    skills: ["Laravel", "PHP", "React", "Vue", "Bootstrap", "Tailwind CSS"]
+  },
+  {
+    name: "Universitas Teknokrat Indonesia",
+    place: "Programming Teknokrat",
+    date: "Feb 2024 - Now",
+    position: "Head of AI Division",
+    description: "Leading the AI division to design and implement intelligent solutions aligned with organizational goals. Collaborated with developers and project managers to integrate AI into internal systems, enhancing CRM automation and decision-making workflows. Conducted weekly training sessions to upskill members in machine learning and AI tools, achieving over 80% of strategic milestones ahead of schedule.",
+    skills: ["Python", "Machine Learning", "TensorFlow", "Scikit-learn", "AI Strategy"]
+  },
+],
 skills: [
   { title: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
   { title: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
