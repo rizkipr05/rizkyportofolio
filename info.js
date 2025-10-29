@@ -9,7 +9,7 @@ let info = {
     }
   },
   description:
- "Hi, I'm Muhammad Rizki Pratama — a 5th-semester Informatics student at Universitas Teknokrat Indonesia. I'm passionate about software development and have over 2 years of experience in UI/UX design using tools like Figma, Adobe XD, Photoshop, and Illustrator. I also have more than 4 years of experience working on software projects involving modern frameworks such as React, React Native, and Vue.js. I'm actively involved in Programming Teknokrat, a student tech organization where I continuously learn and collaborate on innovative projects.",
+ "Hi, I'm Muhammad Rizki Pratama — a 5th-semester Informatics student at Universitas Teknokrat Indonesia. I'm passionate about software development and have over 2 years of experience in UI/UX design using tools like Figma, Adobe XD, Photoshop, and Illustrator. I also have more than 3 years of experience working on software projects involving modern frameworks such as React, React Native, and Vue.js. I'm actively involved in Programming Teknokrat, a student tech organization where I continuously learn and collaborate on innovative projects.",
   links: {
     linkedin: "https://www.linkedin.com/in/muhamad-rzky-pratama/",
     github: "https://github.com/rizkipr05",
@@ -28,8 +28,6 @@ let info = {
         "Software Engineering",
         "web programming",
         "UI/UX design",
-        "Front-end developing",
-        "Back-End Developing",
         "Machine Learning",
       ]
     },
