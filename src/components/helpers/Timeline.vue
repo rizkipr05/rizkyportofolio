@@ -102,12 +102,13 @@ export default {
 }
 
 .timeline-group {
-  padding: 12px 0;
+  padding: 18px 4px;
 }
 
 .timeline-heading {
   text-transform: capitalize;
   margin-bottom: 28px;
+  padding-left: 6px;
 }
 
 ul.timeline {
@@ -127,7 +128,7 @@ ul.timeline:before {
 }
 ul.timeline > li {
   margin: 0 0 22px;
-  padding: 0 0 0 24px;
+  padding: 0 0 0 28px;
 }
 ul.timeline > li:before {
   content: " ";
@@ -148,11 +149,17 @@ ul.timeline > li:before {
 }
 
 .timeline li > div {
-  padding: 18px;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(244, 248, 255, 0.62));
   border: 1px solid rgba(148, 163, 184, 0.18);
   box-shadow: 0 20px 50px rgba(15, 23, 42, 0.06);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.timeline li > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 56px rgba(15, 23, 42, 0.1);
 }
 
 .bg-dark2 .title3 {
@@ -164,7 +171,7 @@ ul.timeline > li:before {
 }
 
 .bg-dark2 .timeline li > div {
-  background: rgba(255, 255, 255, 0.04);
+  background: linear-gradient(180deg, rgba(15, 26, 44, 0.88), rgba(10, 18, 31, 0.74));
   border-color: rgba(148, 163, 184, 0.1);
 }
 </style>

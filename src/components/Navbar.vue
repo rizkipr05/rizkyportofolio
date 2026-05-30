@@ -151,8 +151,9 @@ export default {
 }
 
 .modern-navbar.is-dark {
-  background: rgba(8, 17, 31, 0.72);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.22);
+  background: rgba(6, 12, 24, 0.78);
+  border-bottom-color: rgba(125, 211, 252, 0.08);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.3);
 }
 
 .nav-pill {
@@ -165,6 +166,12 @@ export default {
 .mode-pill:hover {
   background: rgba(14, 165, 233, 0.12);
   color: #0369a1 !important;
+}
+
+.is-dark .nav-pill:hover,
+.is-dark .mode-pill:hover {
+  background: rgba(56, 189, 248, 0.12);
+  color: #7dd3fc !important;
 }
 
 button {
@@ -196,6 +203,16 @@ nav {
   border-radius: 999px;
   border: 1px solid rgba(148, 163, 184, 0.2);
   margin-left: 8px;
+  background: rgba(255, 255, 255, 0.54);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.is-dark .mode-pill {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(8, 17, 31, 0.92));
+  border-color: rgba(125, 211, 252, 0.14);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 10px 24px rgba(0, 0, 0, 0.24);
 }
 
 @media screen and (max-width: 991px) {
@@ -209,6 +226,7 @@ nav {
 
   .is-dark .navbar-collapse {
     background: rgba(8, 17, 31, 0.94);
+    border-color: rgba(125, 211, 252, 0.08);
   }
 
   .mode-pill {

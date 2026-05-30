@@ -9,7 +9,7 @@ let info = {
     }
   },
   description:
-    "Hi, I'm Muhammad Rizki Pratama — a 5th-semester Informatics student at Universitas Teknokrat Indonesia. I'm passionate about software development and have over 2 years of experience in UI/UX design using tools like Figma, Adobe XD, Photoshop, and Illustrator. I also have more than 3 years of experience working on software projects involving modern frameworks such as React, React Native, and Vue.js. I'm actively involved in Programming Teknokrat, a student tech organization where I continuously learn and collaborate on innovative projects.",
+    "Hi, I'm Muhammad Rizki Pratama — a final-semester Informatics student at Universitas Teknokrat Indonesia with a strong focus on fullstack development. I have more than 3 years of hands-on experience building software using modern technologies such as Laravel, React, React Native, and Vue.js, covering both backend architecture and frontend implementation. As I complete my studies, I continue to strengthen my engineering skills through freelance work, real-world product development, and my role in Programming Teknokrat.",
   links: {
     linkedin: "https://www.linkedin.com/in/muhamad-rzky-pratama/",
     github: "https://github.com/rizkipr05",
@@ -42,10 +42,19 @@ let info = {
       name: "Freelancer",
       place: "Bandar Lampung",
       date: "Jan 2024 - Now",
-      position: "Junior Web Developer",
+      position: "Junior Fullstack Developer",
       description:
-        "Creating apps and web UI, developing interactive prototypes, and conducting low-fidelity and UX research to improve user experience.",
+        "Building web applications end-to-end, handling backend logic, frontend implementation, and feature delivery for client needs across multiple projects.",
       skills: ["Laravel", "PHP", "React", "Vue", "Bootstrap", "Tailwind CSS"]
+    },
+    {
+      name: "Joki Proyek",
+      place: "Remote",
+      date: "Sep 2025 - Now",
+      position: "Machine Learning Engineer",
+      description:
+        "Working on machine learning project delivery for academic and applied use cases, including data preprocessing, model training, evaluation, and deployment-oriented experimentation. Contributed to projects involving predictive modeling, classification workflows, and practical implementation using Python-based ML tooling.",
+      skills: ["Python", "Machine Learning", "Scikit-learn", "TensorFlow", "Data Preprocessing"]
     },
     {
       name: "Universitas Teknokrat Indonesia",
@@ -63,6 +72,9 @@ let info = {
     { title: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
     { title: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
     { title: "Javascript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+    { title: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+    { title: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+    { title: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
     { title: "Laravel", icon: "https://cdn.simpleicons.org/laravel/FF2D20" },
     { title: "VueJS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" },
     { title: "NodeJS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },

@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="{ 'text-dark': !nightMode, 'text-light': nightMode }">
+  <div id="app" :class="{ 'text-dark': !nightMode, 'text-light': nightMode, 'theme-dark': nightMode }">
     <Navbar @scroll="scrollTo" @nightMode="switchMode" :nightMode="nightMode" />
     <div class="parent">
       <Home :nightMode="nightMode" />
@@ -121,6 +121,14 @@ body {
   min-height: 100vh;
 }
 
+#app.theme-dark {
+  background:
+    radial-gradient(circle at top left, rgba(34, 211, 238, 0.12), transparent 24%),
+    radial-gradient(circle at top right, rgba(99, 102, 241, 0.12), transparent 22%),
+    linear-gradient(180deg, #050b16 0%, #08111f 32%, #0a1628 100%);
+  color: #e7eefc;
+}
+
 @media screen and (max-width: 580px) {
   #app {
     width: 100%;
@@ -134,6 +142,18 @@ body {
   overflow: hidden;
 }
 
+.theme-dark .parent::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 10% 14%, rgba(34, 211, 238, 0.08), transparent 18%),
+    radial-gradient(circle at 86% 12%, rgba(59, 130, 246, 0.1), transparent 16%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 30%);
+  z-index: 0;
+}
+
 .pgray {
   color: var(--text-secondary);
 }
@@ -144,6 +164,11 @@ body {
 
 .bg-dark2 {
   background: linear-gradient(180deg, rgba(8, 17, 31, 0.98), rgba(13, 24, 42, 0.98)) !important;
+}
+
+.theme-dark .bg-dark2 {
+  background:
+    linear-gradient(180deg, rgba(8, 17, 31, 0.98), rgba(11, 21, 38, 0.98)) !important;
 }
 
 .text-light {
@@ -202,6 +227,19 @@ hr {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #949494;
+}
+
+.theme-dark ::-webkit-scrollbar-track {
+  background: #08111f;
+  border-color: #08111f;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb {
+  background: #1e3a5f;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb:hover {
+  background: #2c537f;
 }
 
 .tooltip {
