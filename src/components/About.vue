@@ -1,6 +1,6 @@
 <template>
   <div
-    class="py-4 p-st"
+    class="py-5 p-st section-wrap"
     :class="{
       'bg-light': !nightMode,
       'bg-dark2': nightMode,
@@ -9,13 +9,17 @@
   >
     <div class="container">
       <div
-        class="text-center"
+        class="text-center section-head"
         data-aos="fade"
         data-aos-once="true"
         data-aos-duration="1000"
       >
         <span
-          class="title text-center"
+          class="section-kicker"
+          >Career timeline</span
+        >
+        <span
+          class="title text-center d-block mt-2"
           :class="{ pgray: !nightMode, 'text-light': nightMode }"
           >About Me</span
         >
@@ -66,8 +70,28 @@ export default {
 </script>
 
 <style scoped>
+.section-wrap {
+  position: relative;
+}
+
+.section-head {
+  margin-bottom: 24px;
+}
+
+.section-kicker {
+  display: inline-block;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(14, 165, 233, 0.12);
+  color: #0369a1;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .title {
-  font-size: 30px;
-  font-weight: 500;
+  font-size: 2.4rem;
+  font-weight: 700;
 }
 </style>

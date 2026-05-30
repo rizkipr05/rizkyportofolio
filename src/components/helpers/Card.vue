@@ -8,7 +8,7 @@
         'bg-dark3': nightMode,
       }"
     >
-      <div style="height: 180px;">
+      <div class="image-frame" style="height: 200px;">
         <img
           class="card-img-top"
           :src="portfolio.pictures[0].img"
@@ -16,6 +16,10 @@
         />
       </div>
       <div class="card-body pborder-top">
+        <div class="meta-row mb-3">
+          <span class="project-type">{{ portfolio.category }}</span>
+          <span class="project-date">{{ portfolio.date }}</span>
+        </div>
         <h5 class="title2">{{ portfolio.name }}</h5>
         <div>
           <div class="pb-1 bheight">
@@ -83,8 +87,8 @@ export default {
 
 <style scoped>
 img {
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
@@ -118,37 +122,40 @@ div.img-div {
   height: 100%;
 }
 .pborder-top {
-  border-top: 1px solid rgb(193, 193, 193);
+  border-top: 1px solid rgba(148, 163, 184, 0.18);
 }
 
 .pcard {
-  background-color: rgb(255, 255, 255);
-  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.72);
+  border-radius: 22px;
   border: none;
-  box-shadow: 1px 1px 12px rgb(233, 233, 233);
+  box-shadow: 0 24px 55px rgba(15, 23, 42, 0.08);
   transition: all 0.5s;
-  height: 460px;
+  height: 500px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.18);
 }
 
 .pcard:hover {
   transition: all 0.5s;
-  /* cursor: pointer; */
-  box-shadow: 1px 1px 15px rgb(216, 216, 216);
+  transform: translateY(-8px);
+  box-shadow: 0 28px 65px rgba(15, 23, 42, 0.12);
 }
 
 .pcard-dark {
-  border-radius: 7px;
+  border-radius: 22px;
   border: none;
-  background-color: #30363a !important;
-  /* box-shadow: 1px 1px 12px rgb(53, 53, 53); */
+  background-color: rgba(255, 255, 255, 0.04) !important;
   transition: all 0.5s;
-  height: 460px;
+  height: 500px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.12);
 }
 
 .pcard-dark:hover {
   transition: all 0.5s;
-  /* cursor: pointer; */
-  box-shadow: 1px 1px 12px rgb(53, 53, 53);
+  transform: translateY(-8px);
+  box-shadow: 0 28px 65px rgba(0, 0, 0, 0.22);
 }
 
 .pcard-body {
@@ -167,44 +174,85 @@ div.img-div {
 }
 
 .title2 {
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .title3 {
-  font-size: 16px;
+  font-size: 0.95rem;
   font-weight: 400;
+  color: #5f6f87;
 }
 
 .badge {
-  background-color: #bbd4dd;
+  background-color: rgba(14, 165, 233, 0.12);
+  color: #0369a1;
   transition: all 0.5s;
-  font-weight: 500;
-  font-size: 13px;
+  font-weight: 600;
+  font-size: 0.78rem;
+  padding: 0.55rem 0.85rem;
 }
 
 .btn {
-  border-color: #759CC9;
-  color: #759CC9;
+  border-color: rgba(14, 165, 233, 0.24);
+  color: #0369a1;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
 }
 
 .btn:hover {
-  background-color: #759CC9;
-  border-color: #759CC9;
+  background-color: #0ea5e9;
+  border-color: #0ea5e9;
   color: white;
 }
 
 .btn:focus {
-  background-color: #759CC9;
-  border-color: #759CC9;
+  background-color: #0ea5e9;
+  border-color: #0ea5e9;
   color: white;
 }
 
 .bg-dark3 {
-  background-color: rgb(82, 82, 82);
+  background-color: rgba(255, 255, 255, 0.04);
 }
 
 .bg-dark4 {
-  background-color: #494e55 !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.image-frame {
+  overflow: hidden;
+}
+
+.image-frame img {
+  transition: transform 0.5s ease;
+}
+
+.pcard:hover .image-frame img,
+.pcard-dark:hover .image-frame img {
+  transform: scale(1.04);
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.project-type,
+.project-date {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.project-type {
+  color: #0ea5e9;
+}
+
+.project-date {
+  color: #94a3b8;
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
-  <div :class="{ 'bg-white': !nightMode, 'bg-dark': nightMode }" class="p-st">
-    <div class="container py-4">
-      <!-- Header -->
+  <div :class="{ 'gallery-dark': nightMode }" class="p-st gallery-section">
+    <div class="container py-5">
       <div class="text-center" data-aos="fade" data-aos-once="true" data-aos-duration="1000">
-        <span class="title text-center" :class="{ 'text-dark': !nightMode, 'text-light': nightMode }">
+        <span class="section-kicker">Moments beyond code</span>
+        <span class="title text-center d-block mt-2" :class="{ 'text-dark': !nightMode, 'text-light': nightMode }">
           Gallery
         </span>
       </div>
@@ -14,7 +14,6 @@
         </p>
       </div>
 
-      <!-- Gallery Slider -->
       <div class="slider-container">
         <div class="slider-wrapper" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
           <div class="slide" v-for="(slide, index) in slides" :key="index">
@@ -22,7 +21,6 @@
           </div>
         </div>
 
-        <!-- Navigation Arrows -->
         <button class="nav-arrow prev" :class="{ 'nav-light': !nightMode, 'nav-dark': nightMode }" @click="prevSlide">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="15,18 9,12 15,6"></polyline>
@@ -35,7 +33,6 @@
           </svg>
         </button>
 
-        <!-- Auto-play Control -->
         <button class="control-btn" :class="{ 'nav-light': !nightMode, 'nav-dark': nightMode }" @click="toggleAutoplay">
           <svg v-if="isAutoPlaying" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="6" y="4" width="4" height="16"></rect>
@@ -46,7 +43,6 @@
           </svg>
         </button>
 
-        <!-- Pagination Dots -->
         <div class="pagination">
           <button 
             v-for="(slide, index) in slides" 
@@ -63,7 +59,6 @@
         </div>
       </div>
 
-      <!-- Image Counter -->
       <div class="text-center mt-3">
         <span class="counter" :class="{ 'text-dark': !nightMode, 'text-light': nightMode }">
           {{ currentSlide + 1 }} / {{ slides.length }}
@@ -115,7 +110,7 @@ export default {
     AOS.init();
     this.startAutoplay();
   },
-  beforeUnmount() {
+  beforeDestroy() {
     this.stopAutoplay();
   },
   methods: {
@@ -163,20 +158,24 @@ export default {
 
 <style scoped>
 .title {
-  font-size: 30px;
-  font-weight: 500;
+  font-size: 2.4rem;
+  font-weight: 700;
 }
 
-.text-dark {
-  color: #111;
+.section-kicker {
+  display: inline-block;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(14, 165, 233, 0.12);
+  color: #0369a1;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .text-light {
   color: #fff;
-}
-
-.bg-dark {
-  background-color: #111;
 }
 
 .pgray {
@@ -209,8 +208,9 @@ export default {
   width: 100%;
   height: 400px;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 28px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.1);
 }
 
 .slider-wrapper {
@@ -242,8 +242,8 @@ export default {
   top: 50%;
   transform: translateY(-50%);
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -251,6 +251,12 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.nav-light,
+.nav-dark,
+.control-btn {
+  backdrop-filter: blur(14px);
 }
 
 .nav-arrow.prev {

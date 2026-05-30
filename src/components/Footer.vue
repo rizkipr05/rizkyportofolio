@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-secondary">
-    <div class="container py-3">
+  <div class="footer-shell">
+    <div class="container py-4">
       <div class="row pt-1 align-items-center">
         <div
           class="col-xl-6 col-bg-6 col-md-6 col-sm-12 pbelow"
@@ -67,19 +67,25 @@ export default {
 </script>
 
 <style scoped>
+.footer-shell {
+  background: linear-gradient(135deg, #08111f, #10203a);
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+}
+
 span {
   font-weight: 500;
 }
 
 .btn {
-  border-color: white;
+  border-color: rgba(255, 255, 255, 0.28);
   color: white;
+  border-radius: 999px;
 }
 
 .btn:hover {
   background-color: white;
   border-color: white;
-  color: gray;
+  color: #10203a;
 }
 
 .btn:focus {

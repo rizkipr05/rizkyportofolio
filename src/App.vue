@@ -82,44 +82,102 @@ export default {
 </script>
 
 <style>
+:root {
+  --bg-page: #f4f7fb;
+  --bg-surface: rgba(255, 255, 255, 0.72);
+  --bg-surface-strong: rgba(255, 255, 255, 0.92);
+  --bg-dark: #08111f;
+  --bg-dark-surface: rgba(10, 18, 33, 0.82);
+  --text-primary: #0c1729;
+  --text-secondary: #5f6f87;
+  --accent: #0ea5e9;
+  --accent-strong: #2563eb;
+  --accent-soft: rgba(14, 165, 233, 0.14);
+  --border-soft: rgba(130, 154, 186, 0.22);
+  --shadow-soft: 0 24px 80px rgba(11, 27, 52, 0.12);
+  --shadow-strong: 0 30px 80px rgba(7, 15, 31, 0.28);
+  --radius-xl: 30px;
+  --radius-lg: 22px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(14, 165, 233, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.16), transparent 24%),
+    linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%);
+  color: var(--text-primary);
+}
+
 #app {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Outfit", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: var(--text-primary);
   width: 100%;
+  min-height: 100vh;
 }
 
 @media screen and (max-width: 580px) {
   #app {
-    width: fit-content;
+    width: 100%;
   }
 }
 
 .parent {
-  margin-top: 38px;
-  padding-top: 40px;
+  margin-top: 32px;
+  padding-top: 56px;
   position: relative;
+  overflow: hidden;
 }
 
 .pgray {
-  color: #535a5e;
+  color: var(--text-secondary);
 }
 
 .pblue {
-  color: #759CC9;
+  color: var(--accent);
 }
 
 .bg-dark2 {
-  background-color: #262c30 !important;
+  background: linear-gradient(180deg, rgba(8, 17, 31, 0.98), rgba(13, 24, 42, 0.98)) !important;
 }
 
 .text-light {
-  color: #d3d2d2 !important;
+  color: #e7eefc !important;
+}
+
+.text-dark {
+  color: var(--text-primary) !important;
 }
 
 .p-st {
   transition: all 0.5s !important;
+}
+
+.container {
+  max-width: 1180px;
+}
+
+.title,
+.title1,
+.title2,
+.title3,
+.home-title,
+.section-title {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.badge {
+  border-radius: 999px;
+}
+
+hr {
+  border-top: 1px solid rgba(143, 161, 183, 0.2);
 }
 
 /* To set scrollbar width */
@@ -152,11 +210,10 @@ export default {
 }
 
 .tooltip .tooltip-inner {
-  background: #64808E;
+  background: #0f172a;
   color: white;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 10px;
-  /* padding: 5px 10px 4px; */
 }
 
 .tooltip .tooltip-arrow {
@@ -165,7 +222,7 @@ export default {
   border-style: solid;
   position: absolute;
   margin: 5px;
-  border-color: #64808E;
+  border-color: #0f172a;
   z-index: 1;
 }
 

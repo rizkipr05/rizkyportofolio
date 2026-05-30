@@ -14,6 +14,7 @@
         data-aos-once="true"
         data-aos-duration="1000"
       >
+        <span class="section-kicker">Let's build something</span>
         <h2 class="title" :class="{ 'text-dark': !nightMode, 'text-light': nightMode }">
           Contact
         </h2>
@@ -24,7 +25,7 @@
         />
       </div>
 
-      <form class="text-center">
+      <form class="text-center contact-shell">
         <div
           class="form-group"
           data-aos="fade-up"
@@ -162,58 +163,93 @@ export default {
 
 <style scoped>
 .title {
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 2.4rem;
+  font-weight: 700;
 }
 
-/* Input Modern Style */
+.section-kicker {
+  display: inline-block;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(14, 165, 233, 0.12);
+  color: #0369a1;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.contact-shell {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+}
+
 .pinput-modern {
   width: 100%;
-  max-width: 600px;
-  padding: 14px 18px;
+  max-width: 100%;
+  padding: 16px 18px;
   font-size: 16px;
-  border-radius: 12px;
-  border: none;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
   margin: 10px auto;
-  background: #f0f0f0;
+  background: rgba(255, 255, 255, 0.8);
   transition: all 0.3s ease;
-  box-shadow: inset 2px 2px 6px #ccc, inset -2px -2px 6px #fff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .pinput-modern:focus {
   outline: none;
-  box-shadow: 0 0 8px #759CC9;
+  border-color: rgba(14, 165, 233, 0.42);
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.12);
   background: #ffffff;
 }
 
-/* Dark mode override */
-.bg-dark2 .pinput-modern {
-  background: #2f2f2f;
-  color: #eee;
-  box-shadow: inset 2px 2px 5px #1f1f1f, inset -2px -2px 5px #444;
-}
-.bg-dark2 .pinput-modern:focus {
-  background: #3c4148;
-  box-shadow: 0 0 10px #00f0ff;
+.bg-dark2 .contact-shell {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(148, 163, 184, 0.12);
 }
 
-/* Button style */
+.bg-dark2 .pinput-modern {
+  background: rgba(255, 255, 255, 0.04);
+  color: #eee;
+  border-color: rgba(148, 163, 184, 0.12);
+  box-shadow: none;
+}
+.bg-dark2 .pinput-modern:focus {
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.12);
+}
+
 .btn-modern {
-  background-color: #759cc9;
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
   color: white;
-  padding: 12px 40px;
+  padding: 14px 40px;
   font-size: 16px;
-  border-radius: 8px;
+  font-weight: 700;
+  border-radius: 999px;
   border: none;
   transition: all 0.3s ease-in-out;
+  box-shadow: 0 22px 42px rgba(37, 99, 235, 0.22);
 }
 .btn-modern:hover {
-  background-color: #5b87c1;
   transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(117, 156, 201, 0.3);
+  box-shadow: 0 26px 50px rgba(37, 99, 235, 0.3);
 }
 
 .form-group {
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 580px) {
+  .contact-shell {
+    padding: 20px;
+    border-radius: 22px;
+  }
 }
 </style>

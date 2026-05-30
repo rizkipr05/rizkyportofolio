@@ -124,7 +124,8 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(3, 7, 18, 0.72);
+  backdrop-filter: blur(14px);
   transition: opacity 0.5s ease;
 }
 
@@ -142,8 +143,9 @@ a:hover {
   width: 40%;
   max-height: 70%;
   margin: 0px auto;
-  border-radius: 7px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   flex-direction: column;
   display: flex; /*added*/
@@ -207,7 +209,8 @@ a:hover {
 }
 
 .badge {
-  background-color: #bbd4dd;
+  background-color: rgba(14, 165, 233, 0.12);
+  color: #0369a1;
   transition: all 0.5s;
   font-weight: 500;
 }
@@ -218,23 +221,24 @@ a:hover {
 }
 
 .btn {
-  border-color: #759CC9;
-  color: #759CC9;
+  border-color: rgba(14, 165, 233, 0.24);
+  color: #0369a1;
+  border-radius: 999px;
 }
 
 .btn:hover {
-  background-color: #759CC9;
-  border-color: #759CC9;
+  background-color: #0ea5e9;
+  border-color: #0ea5e9;
   color: white;
 }
 
 .btn:focus {
-  background-color: #759CC9;
-  border-color: #759CC9;
+  background-color: #0ea5e9;
+  border-color: #0ea5e9;
   color: white;
 }
 
 .bg-dark4 {
-  background-color: #494e55 !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
 }
 </style>

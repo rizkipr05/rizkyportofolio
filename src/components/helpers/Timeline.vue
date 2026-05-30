@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="mx-3 mt-3 mb-5">
+    <div class="mx-3 mt-3 mb-5 timeline-group">
       <div class="row">
         <div class="col-xl-12 col-bg-12 col-md-12 col-sm-12">
           <p
-            class="title1"
+            class="title1 timeline-heading"
             data-aos="fade"
             data-aos-once="true"
             data-aos-easing="ease-in-out"
@@ -69,29 +69,45 @@ export default {
 
 <style scoped>
 .title1 {
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 1.45rem;
+  font-weight: 700;
 }
 
 .title2 {
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .title3 {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #5f6f87;
 }
 
 .badge {
-  background-color: #bbd4dd;
+  background-color: rgba(14, 165, 233, 0.12);
+  color: #0369a1;
   transition: all 0.5s;
-  font-weight: 500;
+  font-weight: 600;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
 }
 
 .date {
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #0ea5e9;
+}
+
+.timeline-group {
+  padding: 12px 0;
+}
+
+.timeline-heading {
+  text-transform: capitalize;
+  margin-bottom: 28px;
 }
 
 ul.timeline {
@@ -100,33 +116,55 @@ ul.timeline {
 }
 ul.timeline:before {
   content: " ";
-  background: #d4d9df;
+  background: linear-gradient(180deg, rgba(14, 165, 233, 0.34), rgba(59, 130, 246, 0.08));
   display: inline-block;
   position: absolute;
-  left: 29px;
-  width: 2px;
-  height: 93%;
-  margin-top: 20px;
+  left: 23px;
+  width: 1px;
+  height: calc(100% - 42px);
+  margin-top: 22px;
   z-index: 400;
 }
 ul.timeline > li {
-  margin: 20px 0;
-  padding-left: 20px;
+  margin: 0 0 22px;
+  padding: 0 0 0 24px;
 }
 ul.timeline > li:before {
   content: " ";
-  background: #8585ad;
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
   display: inline-block;
   position: absolute;
   border-radius: 50%;
-  border: 2px solid #8585ad;
-  left: 20px;
-  width: 25px;
-  height: 25px;
+  border: 4px solid rgba(255, 255, 255, 0.92);
+  box-shadow: 0 0 0 6px rgba(14, 165, 233, 0.12);
+  left: 9px;
+  width: 28px;
+  height: 28px;
   z-index: 400;
 }
 
 .bg-dark2 {
-  background-color: #3c4148 !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.timeline li > div {
+  padding: 18px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.06);
+}
+
+.bg-dark2 .title3 {
+  color: rgba(231, 238, 252, 0.68);
+}
+
+.bg-dark2 .badge {
+  color: #7dd3fc;
+}
+
+.bg-dark2 .timeline li > div {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(148, 163, 184, 0.1);
 }
 </style>

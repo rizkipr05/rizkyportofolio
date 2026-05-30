@@ -35,14 +35,16 @@ export default {
 }
 
 .logo-title-name {
-  font-size: 35px;
-  font-weight: 500;
-  letter-spacing: 2px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   transition: 0.5s all;
 }
 
 .logo-title-dot {
-  font-size: 30px;
+  font-size: 1.8rem;
   font-weight: 700;
 }
 </style>

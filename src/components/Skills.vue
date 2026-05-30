@@ -1,14 +1,19 @@
 <template>
-  <div :class="{ 'bg-white': !nightMode, 'bg-dark': nightMode }" class="p-st">
-    <div class="container py-4">
+  <div :class="{ 'skills-dark': nightMode }" class="p-st skills-section">
+    <div class="container py-5">
       <div
-        class="text-center"
+        class="text-center section-head"
         data-aos="fade"
         data-aos-once="true"
         data-aos-duration="1000"
       >
         <span
-          class="title text-center"
+          class="section-kicker"
+        >
+          Technical stack
+        </span>
+        <span
+          class="title text-center d-block mt-2"
           :class="{ 'text-dark': !nightMode, 'text-light': nightMode }"
         >
           Skills
@@ -67,8 +72,8 @@ export default {
 
 <style scoped>
 .title {
-  font-size: 30px;
-  font-weight: 500;
+  font-size: 2.4rem;
+  font-weight: 700;
 }
 .title1 {
   font-size: 24px;
@@ -83,47 +88,80 @@ export default {
   font-weight: 400;
 }
 
-.text-dark {
-  color: #111;
+.section-head {
+  margin-bottom: 18px;
+}
+
+.section-kicker {
+  display: inline-block;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(14, 165, 233, 0.12);
+  color: #0369a1;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.skills-section {
+  position: relative;
+}
+
+.skills-section::before {
+  content: "";
+  position: absolute;
+  inset: 10% auto auto -10%;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.18), transparent 70%);
+  pointer-events: none;
 }
 
 .skill-card {
-  border-radius: 8px;
+  border-radius: 24px;
   width: 100%;
-  height: 100px;
+  min-height: 132px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 14px;
   transition: all 0.3s ease-in-out;
   cursor: default;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
 }
 
-/* Mode Terang */
 .skill-light {
-  background-color: #f9f9f9;
+  background: rgba(255, 255, 255, 0.72);
   color: #111;
-  border: 1px solid #ccc;
 }
 .skill-light:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 55px rgba(15, 23, 42, 0.12);
 }
 
-/* Mode Gelap */
 .skill-dark {
-  background-color: #111;
-  color: #00f0ff;
-  border: 1px solid #00f0ff;
+  background: rgba(255, 255, 255, 0.04);
+  color: #dbeafe;
+  border-color: rgba(125, 211, 252, 0.12);
 }
 .skill-dark:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 12px #00f0ff;
+  transform: translateY(-6px);
+  box-shadow: 0 24px 55px rgba(2, 132, 199, 0.14);
 }
 
 .skill-icon {
-  width: 24px;
-  height: 24px;
-  filter: brightness(1.2) drop-shadow(0 0 4px #00f0ff);
+  width: 38px;
+  height: 38px;
+  filter: drop-shadow(0 10px 18px rgba(14, 165, 233, 0.22));
+}
+
+.skill-card span {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
 }
 </style>

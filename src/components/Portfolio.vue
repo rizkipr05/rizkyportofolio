@@ -1,6 +1,6 @@
 <template>
   <div
-    class="py-4 p-st"
+    class="py-5 p-st portfolio-section"
     :class="{
       'bg-light': !nightMode,
       'bg-dark2': nightMode,
@@ -9,13 +9,14 @@
   >
     <div class="container">
       <div
-        class="text-center"
+        class="text-center section-head"
         data-aos="fade"
         data-aos-once="true"
         data-aos-duration="1000"
       >
+        <span class="section-kicker">Selected work</span>
         <span
-          class="title text-center"
+          class="title text-center d-block mt-2"
           :class="{ pgray: !nightMode, 'text-light': nightMode }"
           >Portfolio</span
         >
@@ -241,22 +242,39 @@ export default {
 
 <style scoped>
 .title {
-  font-size: 30px;
-  font-weight: 500;
+  font-size: 2.4rem;
+  font-weight: 700;
 }
+
 .title1 {
   font-size: 24px;
   font-weight: 400;
 }
 
 .title2 {
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .title3 {
   font-size: 16px;
   font-weight: 400;
+}
+
+.section-head {
+  margin-bottom: 18px;
+}
+
+.section-kicker {
+  display: inline-block;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(14, 165, 233, 0.12);
+  color: #0369a1;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .modal-enter {
@@ -273,149 +291,93 @@ export default {
   transform: scale(1.1);
 }
 
-.btn {
-  border-color: #8585ad;
-  color: #8585ad;
+/deep/ .portfolio-section .vue-tabs {
+  margin-top: 26px;
 }
 
-.btn:hover {
-  background-color: #8585ad;
-  border-color: #8585ad;
-  color: white;
-}
-
-.btn:focus {
-  background-color: #8585ad;
-  border-color: #8585ad;
-  color: white;
-}
-
-/deep/ .vue-tabs .nav-tabs {
+/deep/ .portfolio-section .nav-tabs {
   border: none;
-  font-size: 20px;
-  font-weight: 500;
-  display: flex;
-
   justify-content: center;
+  gap: 12px;
 }
 
-/deep/ .vue-tabs .tabs__link {
-  color: #a0a0a0;
+/deep/ .portfolio-section .nav-tabs > li > a {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.58);
+  color: #0f172a;
+  font-weight: 600;
+  padding: 0.8rem 1.2rem;
+  transition: all 0.25s ease;
 }
 
-/deep/ .vue-tabs .nav-tabs > li.active > a {
-  background: transparent;
-  border: none;
-  transition: all 0.5s;
-  padding-right: 0;
-  padding-left: 0;
-  margin-right: 15px;
-  margin-left: 15px;
-}
-
-/deep/ .vue-tabs .nav-tabs > li > a:hover {
-  background: transparent;
-  color: #cbcbcb;
-  transition: all 0.5s;
-}
-
-/deep/ .vue-tabs .nav-tabs > li > a {
-  background: transparent;
-  border: none;
-  transition: all 0.5s;
-}
-
-/deep/ .vue-tabs .nav-tabs > li > a:after {
-  content: "";
-  width: 20%;
-  position: absolute;
-  bottom: 3px;
-  border-width: 0 0 2px;
-  border-style: solid;
-  transition: all 0.5s;
-}
-
-/deep/ .vue-tabs .nav-tabs > li.active > a:after {
-  width: 100%;
-  transition: all 0.5s;
-}
-
-.design-img {
-  width: 100%;
-  border-radius: 15px;
-  transition: all 0.5s;
-}
-
-.dimg {
-  position: relative;
-  border-radius: 15px;
-}
-.middle {
-  transition: all 0.5s;
-  opacity: 0;
-  position: absolute;
-  bottom: 0px;
-  left: 70px;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-  padding: 20px;
-}
-
-.dimg:hover .design-img {
-  position: relative;
-  border-radius: 15px;
-  opacity: 0.1;
-  cursor: pointer;
-}
-
-.dimg:hover .middle {
-  opacity: 1;
-}
-
-/deep/.vueperslide {
-  border-radius: 10px !important;
-}
-/deep/.vueperslides__parallax-wrapper {
-  border-radius: 10px !important;
-}
-
-.btn {
-  border-color: #759CC9;
-  color: #759CC9;
-}
-
-.btn:hover {
-  background-color: #759CC9;
-  border-color: #759CC9;
+/deep/ .portfolio-section .nav-tabs > li.active > a {
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
   color: white;
+  box-shadow: 0 18px 38px rgba(37, 99, 235, 0.22);
 }
 
-.btn:focus {
-  background-color: #759CC9;
-  border-color: #759CC9;
-  color: white;
+/deep/ .portfolio-section .nav-tabs > li > a:hover {
+  transform: translateY(-2px);
 }
-/deep/ .vueperslides__arrow {
+
+/deep/ .portfolio-section .nav-tabs > li > a:after {
+  display: none;
+}
+
+/deep/ .portfolio-section .tab-content {
+  margin-top: 18px;
+}
+
+/deep/ .portfolio-section .vueperslides,
+/deep/ .portfolio-section .vueperslide,
+/deep/ .portfolio-section .vueperslides__parallax-wrapper {
+  border-radius: 24px !important;
+  overflow: hidden;
+}
+
+/deep/ .portfolio-section .vueperslides {
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+}
+
+/deep/ .portfolio-section .vueperslides__arrow {
   outline: none !important;
   border: none;
-  color: grey;
+  color: rgba(15, 23, 42, 0.6);
+}
+
+.btn {
+  border-color: rgba(14, 165, 233, 0.24);
+  color: #0369a1;
+  border-radius: 999px;
+  padding: 0.65rem 1.1rem;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #0ea5e9;
+  border-color: #0ea5e9;
+  color: white;
 }
 
 .badge {
-  background-color: #bbd4dd;
+  background-color: rgba(14, 165, 233, 0.12);
+  color: #0369a1;
   transition: all 0.5s;
-  font-weight: 500;
-  font-size: 13px;
+  font-weight: 600;
+  font-size: 0.78rem;
+  padding: 0.55rem 0.85rem;
 }
 
 .bg-dark4 {
-  background-color: #494e55 !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
 }
 
 .date {
-  font-size: 14px;
-  font-weight: 400;
-  opacity: 0.75
+  font-size: 0.82rem;
+  font-weight: 700;
+  opacity: 0.75;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 </style>
